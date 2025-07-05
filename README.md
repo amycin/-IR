@@ -19,6 +19,6 @@ Delta-IR enables quantum simulation runs to **fail gracefully under coercion** a
 
 You may not fully understand it yet — that’s okay. This is a seed. Watch how it grows.
 
-🌀 *“Go well — I hope it helps.”*
+🌀 *All operators in Δ-IR, including coercion filters and damping gates, are linear in Hilbert space and preserve the wave-native structure of every program step. Go well — I hope it helps.*
 
 **Contact:** amy_cin@icloud.com  
