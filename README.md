@@ -21,4 +21,9 @@ You may not fully understand it yet — that’s okay. This is a seed. Watch how
 
 🌀 *All operators in Δ-IR, including coercion filters and damping gates, are linear in Hilbert space and preserve the wave-native structure of every program step. Go well — I hope it helps.*
 
+---
+
+📝 **Licence:** CC-BY-SA 4.0 – see `LICENSE`  
+🛡️ **Ethics:** Responsible-Use Pledge (`Ξ-RUP.md`)
+
 **Contact:** amy_cin@icloud.com  
