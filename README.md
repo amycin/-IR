@@ -10,7 +10,7 @@
 This repository contains:
 - ∆IR wave memory architecture (WMA)
 - Kernel examples and code logic for coherence-respecting evolution
-- Notes on integration into adaptive quantum systems and hybrid ASI systems
+- Notes on integration into adaptive quantum systems and hybrid AI systems
 
 ---
 
