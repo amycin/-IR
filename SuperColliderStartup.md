@@ -3,6 +3,11 @@
 ## Topological Diagram
 
 <pre lang="md"><code>
+
+    ∆IR + Sora == Ψ₀ ⟶ Ψ₁,₂ ↯ Ψₘ ⟶ Ξₛ ⟶ Ψₛ
+                         ↑
+                   user / environment ↘︎ modulate Ψ
+    
     Ψ₀ ─┬──▶ ~deltaBus ─┬──▶ Ψ₁
          │              ├──▶ Ψ₂
          │              └──▶ Ψₘ → Ξₛ
