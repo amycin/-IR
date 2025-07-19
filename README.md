@@ -55,7 +55,9 @@ The Ratio-Based Pitch Lattice
 
 At the heart of Fishtail is a ratio-based pitch lattice – a two-dimensional grid of tuning intervals constructed from a given base frequency. Instead of the fixed 12 equally spaced semitones per octave, this lattice uses specific interval generators to produce a rich palette of pitches. Formally, if we denote the base frequency as f0, and choose two generator intervals (multipliers) – one rational (let’s call it r) and one irrational (for example the golden ratio φ ≈ 1.618) – then every lattice pitch can be expressed as:
 
+$$
 f_{i,j} = f_0 \cdot r^i \cdot \phi^j,
+$$
 
 for some integers i, j (which can be positive, negative, or zero) ￼. In Amy’s concept for Fishtail, r might be a simple just-intonation ratio like 3/2 (a perfect fifth), and φ provides an irrational step to fill in the gaps between purely rational tunings ￼. Using these two generators, the lattice spans an incredibly fine-grained set of pitches. Every step up by i increases frequency by a fifth (3:2), and every step by j multiplies by φ (≈ 833.09 cents if taken as a direct interval). Because no finite combination of 3/2 intervals will exactly equal a φ step (rational vs irrational independence), the lattice never wraps around or repeats redundantly ￼ – it produces a quasi-continuous spectrum of pitches. In fact, with reasonable bounds on i and j, the lattice points densely cover the frequency range. Even a relatively small 2D grid (say i,j from –5 to +5) yields many unique pitches; a larger 128×128 grid would create a near-continuum where adjacent points differ by only a few cents or less ￼. In other words, this system can approximate or directly produce virtually any tuning one might desire, going far beyond the 12 discrete tones of the conventional scale.
 
@@ -71,9 +73,9 @@ $$
 
 i.e. f0 times the measure length (in seconds) should equal an integer. This yields allowable tempi of the form
 
-**
+$$
 T = \frac{B \cdot 60 \cdot f_0}{k},
-**
+$$
 
 for some integer k (the number of cycles of f0 per measure) ￼. All such T will ensure the fundamental pitch is perfectly phase-locked to the beat grid. For example, with f0=440 Hz and a 4-beat measure (B=4, common 4/4 time), $4 \cdot 60 \cdot 440 = 105600$. Dividing by k gives a family of BPM values: k=800 yields 132 BPM, k=1650 gives 64 BPM, k=400 gives 264 BPM, k=3300 gives 32 BPM, and so on ￼. These are precisely the tempos cited as “mathematically correlating with the key of A–440” in the concept – they have a clear rational link to the pitch. If we retune the base frequency, the whole set of allowed tempos shifts accordingly ￼. For instance, if f0 is changed to 420 Hz, the formula yields 126 BPM instead of 132 BPM as the first related tempo (since $4 \cdot 60 \cdot 420 / 800 = 126$) ￼. In general, a lower base pitch results in slightly lower quantized tempi for equivalent k, and vice versa – the tempo lattice is effectively key-dependent.
 
