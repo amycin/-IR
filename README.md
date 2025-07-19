@@ -65,11 +65,15 @@ Locking the Tempo Lattice to Pitch
 
 Perhaps the most innovative aspect of Fishtail is how it links tempo (rhythm) to the same ratio lattice as pitch. Just as we quantize pitches to specific frequency ratios, we also quantize tempo values to be in simple relationship with the base frequency f0. The idea is to avoid arbitrary tempos that clash with the tuning; instead, choose tempi where the waveform of f0 fits an integer number of cycles in each beat or measure ￼. In practical terms, this means the beats are synchronized with the zero-crossings of the base tone – eliminating phasing or clicking that could occur when a note’s phase and the rhythmic grid are at odds ￼. Mathematically, if we consider a measure of B beats at tempo T (in BPM), the condition for alignment is:
 
+$$
 f_0 \times \text{(measure duration)} = f_0 \times \frac{B \cdot 60}{T} \; \in \; \mathbb{Z},
+$$
 
 i.e. f0 times the measure length (in seconds) should equal an integer. This yields allowable tempi of the form
 
+**
 T = \frac{B \cdot 60 \cdot f_0}{k},
+**
 
 for some integer k (the number of cycles of f0 per measure) ￼. All such T will ensure the fundamental pitch is perfectly phase-locked to the beat grid. For example, with f0=440 Hz and a 4-beat measure (B=4, common 4/4 time), $4 \cdot 60 \cdot 440 = 105600$. Dividing by k gives a family of BPM values: k=800 yields 132 BPM, k=1650 gives 64 BPM, k=400 gives 264 BPM, k=3300 gives 32 BPM, and so on ￼. These are precisely the tempos cited as “mathematically correlating with the key of A–440” in the concept – they have a clear rational link to the pitch. If we retune the base frequency, the whole set of allowed tempos shifts accordingly ￼. For instance, if f0 is changed to 420 Hz, the formula yields 126 BPM instead of 132 BPM as the first related tempo (since $4 \cdot 60 \cdot 420 / 800 = 126$) ￼. In general, a lower base pitch results in slightly lower quantized tempi for equivalent k, and vice versa – the tempo lattice is effectively key-dependent.
 
@@ -87,4 +91,4 @@ Ultimately, Fishtail is more than a technical exercise; it’s a philosophical s
 
 Acknowledgments: This work, including the Fishtail tuning system and the ideas of carved waveforms, was inspired by conversations with collaborators and muses (codenamed Majorana and ∆IR among others). In many ways, it is a gift to those inspirations – a realization of shared dreams about what music could be. The developers express deep gratitude to those who sparked the vision, and look forward to the community’s engagement with these new tools and concepts. Together, we are guiding each other into the future of sound.
 
-Sources: The technical concepts and implementations discussed are drawn from the Fishtail design notes and SuperCollider code documentation ￼ ￼ ￼ ￼, from psychoacoustic research on loudness and spectral perception ￼, and from sound synthesis literature on creating fat ensemble tones via modulation and detuning ￼ ￼ ￼. The SuperCollider tutorial by M. Polishook was referenced for the noise-carving example ￼. These sources and practical experiments form the foundation of the approach described above.
+Sources: The technical concepts and implementations discussed are drawn from the Fishtail design notes and SuperCollider code documentation ￼ ￼ ￼ ￼, from psychoacoustic research on loudness and spectral perception ￼, and from sound synthesis literature on creating fat ensemble tones via modulation and retuning and scordatura. The SuperCollider tutorial by M. Polishook was referenced for the noise-carving example. These sources and practical experiments form the foundation of the approach described above.
